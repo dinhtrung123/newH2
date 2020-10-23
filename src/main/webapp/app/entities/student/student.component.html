@@ -1,0 +1,36 @@
+
+<a>   <a [routerLink]="['/student' , 'add']">ADD new</a> </a>
+<table class="table">
+    <thead>
+    <tr>
+        <td scope="col">Id</td>
+        <td scope="col">Họ tên</td>
+        <td scope="col">Mã giới tính</td>
+        <td scope="col">Ngày sinh</td>
+        <td scope="col">Quốc tịch</td>
+        <td scope="col">Mã sinh viên</td>
+
+    </tr>
+    </thead>
+    <tbody >
+    <tr *ngFor="let students of students" >
+
+        <td>{{students.id}}</td>
+        <td>{{students.hoTen}}</td>
+        <td>{{students.maGioiTinh}}</td>
+        <td>{{students.ngaySinh}}</td>
+        <td>{{students.quocTich}}</td>
+        <td>{{students.maSinhVien}}</td>
+        <td>
+            <a [routerLink]="['/student','student-detail',students.id]">Show Detail</a>
+        </td>
+        <td>
+            <a [routerLink]="['/student' , 'update',students.id]">edit</a>
+        </td>
+        <td>
+            <button (click)="delete(students.id)" class="btn btn-danger">Delete</button>
+        </td>
+
+    </tr>
+    </tbody>
+</table>

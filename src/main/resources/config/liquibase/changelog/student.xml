@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="autoIncrement" value="true"/>
+<changeSet author="jhipster" id="00000000000003" context="test">
+    <createTable tableName="jhi_date_time_wrapper">
+        <column autoIncrement="${autoIncrement}" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="jhi_date_time_wrapperPK"/>
+        </column>
+        <column name="ho_ten" type="varchar(50)"/>
+        <column name="ma_gioi_tinh" type="varchar(50)"/>
+        <column name="ngay_sinh" type="varchar(50)"/>
+        <column name="quoc_tich" type="varchar(50)"/>
+        <column name="ma_sinh_vien" type="varchar(50)"/>
+    </createTable>
+</changeSet>
+</databaseChangeLog>
